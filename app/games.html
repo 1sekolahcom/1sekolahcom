@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Ikymod</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="theme-color" content="var(--bgColor)">
+</head>
+<body>
+    <!-- Page Content Below -->
+    <h1 class="animated jello">Aplikasi</h1>
+    <div id="links" class="animated fadeInLeft delay-1s">
+        <a class="link" target="_blank" onclick="copyLink('https://www.1sekolah.com/#?url=mLO0bLF4Gw17v7byFEDgm81iWRzyW81uGwF/vEJiAR9FUqNkUCW0O7beD7W7WdgESZTiWjlivXXfSReOSZvpO8QdvCb6RLgOUCa0nTJPvRJeP7TORdJ9TqlgWTXIDUNLQfrrngJwAP==')">Clash Of Clans</a>
+        <a class="link" target="_blank" onclick="copyLink('Kosong')">Comming Soon</a>
+    </div>
+    
+    <a class="atrib" href="https://1sekolah.com">www.1sekolah.com</a>
+
+    <script>
+        function copyLink(link) {
+            // Salin link ke clipboard
+            var dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = link;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            // Tampilkan pop-up dengan link berhasil disalin
+            var popup = document.createElement('div');
+            popup.id = 'popup';
+            popup.innerHTML = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center;">
+                    <div style="width: 70%; padding: 20px; background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); position: relative; text-align: center;">
+                        <span style="position: absolute; top: 10px; right: 10px; font-size: 20px; cursor: pointer;" onclick="closePopup()">×</span>
+                        <strong>Link Berhasil Disalin:</strong>
+                        <br>
+                        <div style="border: 1px solid #ccc; padding: 10px; margin-top: 10px; overflow-x: auto; white-space: nowrap;">
+                            ${link}
+                        </div>
+                        <br>
+                        <small>Silahkan buka browser Chrome untuk paste link.</small>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(popup);
+        }
+
+        function closePopup() {
+            // Tutup pop-up
+            var popup = document.getElementById('popup');
+            if (popup) {
+                document.body.removeChild(popup);
+            }
+        }
+    </script>
+</body>
+</html>
