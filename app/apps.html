@@ -33,16 +33,24 @@
             popup.id = 'popup';
             popup.innerHTML = `
                 <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center;">
-                    <div style="width: 70%; padding: 20px; background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); position: relative; text-align: center;">
-                        <span style="position: absolute; top: 10px; right: 10px; font-size: 20px; cursor: pointer;" onclick="closePopup()">×</span>
+                    <div style="width: 70%; padding: 20px; background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); position: relative; text-align: center; border-radius: 10px;">
+                        <div style="position: absolute; top: 10px; right: 10px;">
+                            <button style="padding: 5px 10px; background-color: #ccc; border: none; cursor: pointer;" onclick="closePopup()">Tutup</button>
+                        </div><br/>
                         <strong>Link Berhasil Disalin!</strong>
                         <br>
                         <div style="border: 1px solid #ccc; padding: 10px; margin-top: 10px; overflow-x: auto; white-space: nowrap;">
                             ${link}
                         </div>
-                        <div>No Password</div>
-                        <br>
-                        <small>Silahkan buka browser Chrome untuk paste link.</small>
+                        <p>Password: <b>Ikymod</b></p><smal align="left">
+                        <b style="font-size: 18px;">Cara download:</b>
+                        <li>Buka aplikasi google crome</li>
+                        <li>Tempelkan link download</li>
+                        <li>Lewati link download</li>
+                        <li>Ekrak jika file format .zip</li>
+                        <li>Masukan pasword jika diminta</li>
+                        <li>Instaal Aplilasi</p>
+                        </small>
                     </div>
                 </div>
             `;
