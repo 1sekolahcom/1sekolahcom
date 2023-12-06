@@ -86,3 +86,6 @@ h6{
     margin-bottom: 20px;
     padding: 17px;
 }
+#popup strong {
+            font-size: 30px; /* Atur ukuran teks sesuai kebutuhan */
+}
