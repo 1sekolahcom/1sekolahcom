@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -64,7 +64,22 @@
     </div>
 
     <!-- Script to handle the video popup -->
-    <script src="./js/script.js"></script>
-</body>
-        </html>
+    <script>
+        function openVideoPopup() {
+            // Reset kembali nilai src
+            document.getElementById("videoFrame").src = "https://www.youtube.com/embed/3Tys3SM4FtI?rel=0";
+            document.getElementById("videoPopup").style.display = "flex";
+        }
+
+        function closeVideoPopup() {
+            document.getElementById("videoPopup").style.display = "none";
+            // Berhenti video ketika ditutup
+            document.getElementById("videoFrame").src = "";
+        }
         
+        // Hide video popup initially
+        document.getElementById("videoPopup").style.display = "none";
+    </script>
+</body>
+    </html>
+    
